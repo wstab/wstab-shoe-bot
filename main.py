@@ -7,11 +7,21 @@ from shoe_scrape import ShoeData
 
 
 # Discord Bot code begins
+
+# Create bot
 BOT_TOKEN = 'Your Discord Bot Token Goes Here'
 
 intents = discord.Intents.default()
 bot = discord.Client(intents=intents)
 tree = app_commands.CommandTree(bot)
+
+
+# Ready
+@bot.event
+async def on_ready():
+    tree.clear_commands(guild=discord.Object(id=1205979767128596540))
+    await tree.sync(guild=discord.Object(id=1205979767128596540))
+    print('Bot is Ready')
 
 
 # Buttons for iteration through pages of Shoes
@@ -46,18 +56,7 @@ class ShoeView(View):
             await interaction.response.edit_message(embed=self.pages[self.currentPage])
 
 
-         
-
-
-
-
-@bot.event
-async def on_ready():
-    tree.clear_commands(guild=discord.Object(id=1205979767128596540))
-    await tree.sync(guild=discord.Object(id=1205979767128596540))
-    print('Bot is Ready')
-
-
+# Slash Commands / Execute
 @tree.command(name='nikeupdate', description='Gives Nike SNKRS Update')
 async def nikeupdate(interaction: discord.Interaction):
     shoesNike = []
