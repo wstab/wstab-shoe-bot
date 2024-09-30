@@ -31,7 +31,11 @@ BOT_TOKEN = 'ENTER YOUR TOKEN'
 
 * Run Program
 * Go to server with bot and type slash command
+
   ![image](https://github.com/user-attachments/assets/5ac46ba5-3058-4bd9-8d0f-0addb4df62cb)
+  
 * You should have now entered the UI
+  
   ![image](https://github.com/user-attachments/assets/8b124c6e-a55f-45c8-8c37-4812ba6e23d8)
+  
 
