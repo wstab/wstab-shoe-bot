@@ -9,7 +9,7 @@ from shoe_scrape import ShoeData
 # Discord Bot code begins
 
 # Create bot
-BOT_TOKEN = 'Your Discord Bot Token Goes Here'
+BOT_TOKEN = 'ENTER YOUR TOKEN'
 
 intents = discord.Intents.default()
 bot = discord.Client(intents=intents)
